@@ -1,0 +1,47 @@
+<!-- Page d'inscription -->
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE FAME – Act 2</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="dark-mode">
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo THE FAME" class="logo animate-fade-in">
+
+    <!-- Titre -->
+    <h1 class="title animate-slide-up">THE FAME – Act 2</h1>
+
+    <!-- Infos de l'événement -->
+    <div class="event-info animate-fade-in">
+      <p>📍 <strong>Lieu :</strong> Dima Lounge</p>
+      <p>🗓️ <strong>Date & Heure :</strong> Jeudi 1er août – 19h</p>
+      <p>🍾 <strong>Boisson obligatoire :</strong> Chaque participant doit apporter une bouteille.</p>
+      <p class="important">🎟️ Un QR code unique vous sera envoyé par mail et scanné à l’entrée.</p>
+    </div>
+
+    <!-- Formulaire -->
+    <form action="/" method="POST" class="form animate-slide-up">
+      <input type="text" name="nom" placeholder="Nom" required>
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit" class="btn-yellow">Je réserve ma place</button>
+    </form>
+
+    <!-- Réseaux sociaux -->
+    <br><br>
+    <div class="socials animate-fade-in">
+      <a href="https://www.instagram.com/thefameoff?igsh=MTZnbHBmaGFkczN5Mw==" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/@thefameoff1?_t=ZM-8yE98tKSNdt&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+    </div>
+  </div>
+
+</body>
+</html>

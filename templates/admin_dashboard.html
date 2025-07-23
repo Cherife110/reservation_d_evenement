@@ -1,0 +1,29 @@
+<!-- Tableau de bord -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard – THE FAME</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <h1>Tableau de bord des inscrits</h1>
+    <p>Total inscrits : {{ total }} / 155</p>
+    <p>Places restantes : {{ remaining }}</p>
+    <table style="width:130%; text-align:left; margin-top: 30px;">
+      <tr><th>Numero</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Date</th></tr>
+      {% for p in participants %}
+      <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.nom }}</td>
+        <td>{{ p.prenom }}</td>
+        <td>{{ p.email }}</td>
+        <td>{{ p.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
